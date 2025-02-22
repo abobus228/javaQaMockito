@@ -6,6 +6,8 @@ public class MovieManager {
     // Массив со списком фильмов
     public DataMovie[] listMovie = new DataMovie[0];
 
+    public int countReturnMovies = 0;  // Подсчет кол-ва выводов фильмов (ДЛЯ ТЕСТА)
+
     private int movieOutputLimit;  // Лимит вывода фильмов из массива
 
 
@@ -31,10 +33,12 @@ public class MovieManager {
 
     // Вывод всех фильмов в порядке добавления
     public void findAll() {
-        for (DataMovie movie : listMovie) {
+                for (DataMovie movie : listMovie) {
             System.out.printf("Номер: %d \nНазвание фильма: %s \nЖанр: %s \nРейтинг: %d",
                     movie.getID(), movie.getMovieTitle(), movie.getFilmGenre(), movie.getMoveRating());
             System.out.println("\n");
+
+            countReturnMovies++; // (ДЛЯ ТЕСТА)
         }
     }
 
@@ -51,6 +55,8 @@ public class MovieManager {
             System.out.printf("Номер: %d \nНазвание фильма: %s \nЖанр: %s \nРейтинг: %d",
                     movie.getID(), movie.getMovieTitle(), movie.getFilmGenre(), movie.getMoveRating());
             System.out.println("\n");
+
+            countReturnMovies++; // (ДЛЯ ТЕСТА)
         }
 
     }
