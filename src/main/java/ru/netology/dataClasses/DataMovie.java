@@ -10,5 +10,5 @@ public class DataMovie {
     private String movieTitle;  // Название фильма
     private String filmGenre;  // Жанр фильма
     private String srcImg;  // Путь до файла обложки
-    private double moveRating; // Рейтинг фильма
+    private int moveRating; // Рейтинг фильма
 }
