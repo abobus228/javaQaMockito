@@ -33,7 +33,7 @@ public class MovieManager {
 
     // Вывод всех фильмов в порядке добавления
     public void findAll() {
-                for (DataMovie movie : listMovie) {
+        for (DataMovie movie : listMovie) {
             System.out.printf("Номер: %d \nНазвание фильма: %s \nЖанр: %s \nРейтинг: %d",
                     movie.getID(), movie.getMovieTitle(), movie.getFilmGenre(), movie.getMoveRating());
             System.out.println("\n");
@@ -44,7 +44,7 @@ public class MovieManager {
 
     // Вывод фильмов в обратном порядке добавления в заданном количестве
     public void findLast() {
-        DataMovie[] listResult = new DataMovie[listMovie.length < this.movieOutputLimit ? listMovie.length : this.movieOutputLimit];
+        DataMovie[] listResult = new DataMovie[Math.min(listMovie.length, this.movieOutputLimit)];
 
         for (int i = 0; i < listResult.length; i++) {
             listResult[i] = listMovie[listMovie.length - 1 - i];

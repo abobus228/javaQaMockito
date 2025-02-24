@@ -75,7 +75,8 @@ public class MovieManagerTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test  // Проверка, количества возвращаемых фильмов в обратном порядке при лимите (стандартном = 5) больше размера списка
+    @Test
+    // Проверка, количества возвращаемых фильмов в обратном порядке при лимите (стандартном = 5) больше размера списка
     public void shouldReturnListInReverseOrderOfBellowNumber5() {
         MovieManager manager = new MovieManager();
 
@@ -91,7 +92,8 @@ public class MovieManagerTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test  // Проверка, количества возвращаемых фильмов в обратном порядке при лимите (заданном вручную = 3) больше размера списка
+    @Test
+    // Проверка, количества возвращаемых фильмов в обратном порядке при лимите (заданном вручную = 3) больше размера списка
     public void shouldReturnListInReverseOrderOfBellowNumber3() {
         managerFromParameters.addMovie(movie1);
         managerFromParameters.addMovie(movie2);
